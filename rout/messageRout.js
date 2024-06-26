@@ -4,8 +4,8 @@ import isLogin from "../middleware/isLogin.js";
 
 const router = express.Router();
 
-router.post('/send/:id' , sendMessage)
+router.post('/send/:id',isLogin , sendMessage)
 
-router.get('/:id', getMessages);
+router.get('/:id',isLogin , getMessages);
 
 export default router
