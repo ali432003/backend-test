@@ -5,9 +5,9 @@ const router = express.Router()
 import upload from "../middleware/multer.js";
 import { imageUpload } from "../routControlers/imageUpload.js"
 
-router.get('/search', isLogin, getUserBySearch);
+router.get('/search', getUserBySearch);
 
-router.get('/currentchatters', isLogin, getCorrentChatters)
+router.get('/currentchatters', getCorrentChatters)
 
 router.put("/imageupload/:id", upload.single("userImg"), imageUpload);
 
