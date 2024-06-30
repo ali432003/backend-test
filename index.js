@@ -25,7 +25,9 @@ app.use(cors({
 //Cloudinary Config
 cloudinaryConfig()
 
-
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to chatapp" })
+})
 app.use('/api/auth', authRouter)
 app.use('/api/message', messageRouter)
 app.use('/api/user', userRouter)
