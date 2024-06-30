@@ -4,6 +4,7 @@ import User from '../Models/userModels.js'
 const isLogin = (req, res, next) => {
     try {
         const token = req.cookies.jwt
+        console.log(token)
         if (!token) return res.status(500).send({ success: false, message: "User Unauthorize" });
         const decode = jwt.verify(token,process.env.JWT_SECRET);
         if(!decode)  return res.status(500).send({success:false, message:"User Unauthorize -Invalid Token"})
