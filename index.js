@@ -19,7 +19,8 @@ dotenv.config();
 app.use(express.json());
 app.use(cookieParser())
 app.use(cors({
-    origin: "https://chatappmernbyme.netlify.app"
+    origin: "https://chatappmernbyme.netlify.app",
+    credentials: true
 }));
 
 //Cloudinary Config
