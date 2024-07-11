@@ -29,9 +29,9 @@ cloudinaryConfig()
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to chatapp" })
 })
-app.use('/api/auth', authRouter)
-app.use('/api/message', messageRouter)
-app.use('/api/user', userRouter)
+app.use('/auth', authRouter)
+app.use('/message', messageRouter)
+app.use('/user', userRouter)
 // app.use(express.static(path.join(__dirname, "./frontend/dist")))
 
 // app.get("*", (req, res) => {
